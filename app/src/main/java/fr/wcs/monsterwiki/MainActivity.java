@@ -12,6 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +45,21 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ListView listTrip = findViewById(R.id.list_monster);
+        ArrayList<MonsterModel> results = new ArrayList<>();
+
+
+        results.add(new MonsterModel("uhd",1,6,66));
+        results.add(new MonsterModel("vvvuhd",1,76,2));
+        results.add(new MonsterModel("ugrehhd",14,65,2));
+        results.add(new MonsterModel("ugeghd",1,8,2));
+
+
+        MonsterAdapter adapter = new MonsterAdapter(this, results);
+        listTrip.setAdapter(adapter);
+
+
     }
 
     @Override
@@ -96,6 +116,16 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+
+
+
+
+
+        // [...]
         return true;
     }
+
 }
+
+
