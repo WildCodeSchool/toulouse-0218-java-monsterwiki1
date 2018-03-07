@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -70,13 +72,33 @@ public class MainActivity extends AppCompatActivity
         MonsterAdapter adapter = new MonsterAdapter(this, results);
         listTrip.setAdapter(adapter);
         ListView listv = findViewById(R.id.list_monster);
+
         listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+
                 Intent intent = new Intent(MainActivity.this, MonsterActivity.class);
+
+                switch (i){
+
+                    case 0:
+                        String place= "0";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 1:
+                        place="1";
+                        intent.putExtra("extraplace",place);
+                        break;
+
+                }
                 startActivity(intent);
             }
         });
+
+        /*TextView monster = findViewById(R.id.textView_name);
+        String name = monster.getText().toString();*/
+
 
 
             }
