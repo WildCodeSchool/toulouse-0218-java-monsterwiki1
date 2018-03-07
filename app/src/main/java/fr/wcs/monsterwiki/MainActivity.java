@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         results.add(new MonsterModel("Thunder Eagle", R.drawable.thunderthunder_eagle_1,R.drawable.bte_thunder, R.drawable.index));
         results.add(new MonsterModel("Sealion",R.drawable.watersealion_1, R.drawable.bte_water,R.drawable.bte_fire));
         results.add(new MonsterModel("Djinn",R.drawable.magicdjinn_1, R.drawable.bte_magic, R.drawable.bte_fire));
-        results.add(new MonsterModel("Scorchpeg",R.drawable.lightscorchpeg_1, R.drawable.bte_fire, R.drawable.bte_light));
+        results.add(new MonsterModel("Scorchpeg",R.drawable.lightscorchpeg_1, R.drawable.bte_light, R.drawable.bte_fire));
         results.add(new MonsterModel("Vadamagma",R.drawable.legendvadamagma_1, R.drawable.bte_legend, R.drawable.bte_fire));
         results.add(new MonsterModel("Gravoid", R.drawable.metalgravoid_1,R.drawable.bte_metal, R.drawable.bte_earth));
 
@@ -88,6 +88,38 @@ public class MainActivity extends AppCompatActivity
                         break;
                     case 1:
                         place="1";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 2:
+                        place="2";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 3:
+                        place="3";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 4:
+                        place="4";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 5:
+                        place="5";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 6:
+                        place="6";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 7:
+                        place="7";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 8:
+                        place="8";
+                        intent.putExtra("extraplace",place);
+                        break;
+                    case 9:
+                        place="9";
                         intent.putExtra("extraplace",place);
                         break;
 
