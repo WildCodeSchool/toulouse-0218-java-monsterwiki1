@@ -1,5 +1,6 @@
 package fr.wcs.monsterwiki;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,10 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
@@ -50,17 +50,39 @@ public class MainActivity extends AppCompatActivity
         ArrayList<MonsterModel> results = new ArrayList<>();
 
 
-        results.add(new MonsterModel("uhd",1,6,66));
-        results.add(new MonsterModel("vvvuhd",1,76,2));
-        results.add(new MonsterModel("ugrehhd",14,65,2));
-        results.add(new MonsterModel("ugeghd",1,8,2));
+        results.add(new MonsterModel("Tyrannoking",R.drawable.darktyrannoking_1, R.drawable.bte_dark,R.drawable.index));
+        results.add(new MonsterModel("Fire Lion",R.drawable.fire_lion_1fire, R.drawable.bte_fire, R.drawable.index));
+        results.add(new MonsterModel("Panda",R.drawable.naturepanda_1, R.drawable.bte_nature, R.drawable.index));
+        results.add(new MonsterModel("Rockila",R.drawable.earthrockilla_1, R.drawable.bte_earth, R.drawable.index));
+        results.add(new MonsterModel("Thunder Eagle", R.drawable.thunderthunder_eagle_1,R.drawable.bte_thunder, R.drawable.index));
+        results.add(new MonsterModel("Sealion",R.drawable.watersealion_1, R.drawable.bte_water,R.drawable.bte_fire));
+        results.add(new MonsterModel("Djinn",R.drawable.magicdjinn_1, R.drawable.bte_magic, R.drawable.bte_fire));
+        results.add(new MonsterModel("Scorchpeg",R.drawable.lightscorchpeg_1, R.drawable.bte_fire, R.drawable.bte_light));
+        results.add(new MonsterModel("Vadamagma",R.drawable.legendvadamagma_1, R.drawable.bte_legend, R.drawable.bte_fire));
+        results.add(new MonsterModel("Gravoid", R.drawable.metalgravoid_1,R.drawable.bte_metal, R.drawable.bte_earth));
+
+
+
+      /*  results.add(new MonsterModel("ugrehhd",14,65,2));
+        results.add(new MonsterModel("ugeghd",1,8,2));*/
 
 
         MonsterAdapter adapter = new MonsterAdapter(this, results);
         listTrip.setAdapter(adapter);
+        ListView listv = findViewById(R.id.list_monster);
+        listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MainActivity.this, MonsterActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
-    }
+            }
+
+
+
 
     @Override
     public void onBackPressed() {
