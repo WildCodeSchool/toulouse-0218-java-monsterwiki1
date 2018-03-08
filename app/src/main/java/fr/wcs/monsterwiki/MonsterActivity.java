@@ -23,15 +23,16 @@ public class MonsterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster);
 
-        ImageView profil = findViewById(R.id.img_monster);
+        final ImageView profil = findViewById(R.id.img_monster);
         final ImageView element1 = findViewById(R.id.img_element1);
-        ImageView element2 = findViewById(R.id.img_element2);
-        final ImageView element3=findViewById(R.id.img_element3);
-        TextView statpower = findViewById(R.id.stats_power);
-        TextView statlife = findViewById(R.id.stats_life);
-        TextView statstamina = findViewById(R.id.stats_stamina);
-        TextView statspeed = findViewById(R.id.stats_speed);
-        TextView name = findViewById(R.id.text_monster);
+        final ImageView element2 = findViewById(R.id.img_element2);
+        final ImageView element3 = findViewById(R.id.img_element3);
+        final TextView level=findViewById(R.id.text_level);
+        final TextView statpower = findViewById(R.id.stats_power);
+        final TextView statlife = findViewById(R.id.stats_life);
+        final TextView statstamina = findViewById(R.id.stats_stamina);
+        final TextView statspeed = findViewById(R.id.stats_speed);
+        final TextView name = findViewById(R.id.text_monster);
 
 
         Intent intent = getIntent();
@@ -60,14 +61,12 @@ public class MonsterActivity extends AppCompatActivity {
 
             String power = "242";
             statpower.setText(power);
-            String life="81";
+            String life = "81";
             statlife.setText(life);
-            String speed="192";
+            String speed = "192";
             statspeed.setText(speed);
-            String stamina="100";
+            String stamina = "100";
             statstamina.setText(stamina);
-
-
 
 
         }
@@ -85,13 +84,13 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setVisibility(View.INVISIBLE);
             element2.setVisibility(View.INVISIBLE);
 
-            String power="209";
+            String power = "209";
             statpower.setText(power);
-            String life="91";
+            String life = "91";
             statlife.setText(life);
             String speed = "220";
             statspeed.setText(speed);
-            String stamina="100";
+            String stamina = "100";
             statstamina.setText(stamina);
 
         }
@@ -107,13 +106,13 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setVisibility(View.INVISIBLE);
             element2.setVisibility(View.INVISIBLE);
 
-            String power="192";
+            String power = "192";
             statpower.setText(power);
-            String life="115";
+            String life = "115";
             statlife.setText(life);
             String speed = "192";
             statspeed.setText(speed);
-            String stamina="100";
+            String stamina = "100";
             statstamina.setText(stamina);
 
 
@@ -130,13 +129,13 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setVisibility(View.INVISIBLE);
             element2.setVisibility(View.INVISIBLE);
 
-            String power="192";
+            String power = "192";
             statpower.setText(power);
-            String life="81";
+            String life = "81";
             statlife.setText(life);
             String speed = "275";
             statspeed.setText(speed);
-            String stamina="100";
+            String stamina = "100";
             statstamina.setText(stamina);
 
 
@@ -152,15 +151,14 @@ public class MonsterActivity extends AppCompatActivity {
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
             element2.setImageDrawable(drawableElement2);
 
-            String power="272";
+            String power = "272";
             statpower.setText(power);
-            String life="89";
+            String life = "89";
             statlife.setText(life);
             String speed = "242";
             statspeed.setText(speed);
-            String stamina="110";
+            String stamina = "110";
             statstamina.setText(stamina);
-
 
 
         }
@@ -174,13 +172,13 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
             element2.setImageDrawable(drawableElement2);
-            String power="297";
+            String power = "297";
             statpower.setText(power);
-            String life="123";
+            String life = "123";
             statlife.setText(life);
             String speed = "198";
             statspeed.setText(speed);
-            String stamina="120";
+            String stamina = "120";
             statstamina.setText(stamina);
             /*power=297;
             LIFE=123;
@@ -198,13 +196,13 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
             element2.setImageDrawable(drawableElement2);
-            String power="286";
+            String power = "286";
             statpower.setText(power);
-            String life="188";
+            String life = "188";
             statlife.setText(life);
             String speed = "286";
             statspeed.setText(speed);
-            String stamina="130";
+            String stamina = "130";
             statstamina.setText(stamina);
             /*power=286;
             LIFE=118;
@@ -222,13 +220,13 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
             element2.setImageDrawable(drawableElement2);
-            String power="331";
+            String power = "331";
             statpower.setText(power);
-            String life="135";
+            String life = "135";
             statlife.setText(life);
             String speed = "306";
             statspeed.setText(speed);
-            String stamina="140";
+            String stamina = "140";
             statstamina.setText(stamina);
 
         }
@@ -242,27 +240,146 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_earth);
             element2.setImageDrawable(drawableElement2);
-            String power="290";
+            String power = "290";
             statpower.setText(power);
-            String life="104";
+            String life = "104";
             statlife.setText(life);
             String speed = "244";
             statspeed.setText(speed);
-            String stamina="120";
+            String stamina = "120";
             statstamina.setText(stamina);
 
 
         }
-        /*FloatingActionButton left=findViewById(R.id.floating_left);
+        final Drawable[] profil2 = {ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_0)};
+        final FloatingActionButton left = findViewById(R.id.floating_left);
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (test.equals("Fire Lion")) {
-                    Drawable drawableElement1 = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.bte_dark);
-                    element3.setImageDrawable(drawableElement1);
+                level.setText("Level 0");
+                left.setVisibility(View.INVISIBLE);
+                if (test.equals("Tyrannoking")) {
+
+                    profil.setImageDrawable(profil2[0]);
+                    statlife.setText("50");
+                    statpower.setText("230");
+                    statspeed.setText("175");
+                    statstamina.setText("100");
                 }
+
+                if (test.equals("Fire Lion")) {
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.fire_lion_0fire);
+                    profil.setImageDrawable(profil2[0]);
+
+
+                    statlife.setText("220");
+                    statpower.setText("50");
+                    statspeed.setText("175");
+                    statstamina.setText("100");
+                }
+
+               if (test.equals("Panda")) {
+
+                   profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.naturepanda_0);
+                   profil.setImageDrawable(profil2[0]);
+
+                   statlife.setText("56");
+                   statpower.setText("190");
+                   statspeed.setText("200");
+                   statstamina.setText("100");
+
+
+               }
+
+                if (test.equals("Rockila")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.earthrockilla_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("71");
+                    statpower.setText("175");
+                    statspeed.setText("175");
+                    statstamina.setText("100");
+
+
+                }
+
+                if (test.equals("Thunder Eagle")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.thunderthunder_eagle_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("50");
+                    statpower.setText("175");
+                    statspeed.setText("250");
+                    statstamina.setText("100");
+
+
+                }
+                if (test.equals("Sealion")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.watersealion_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("50");
+                    statpower.setText("225");
+                    statspeed.setText("200");
+                    statstamina.setText("110");
+
+
+                 }
+                if (test.equals("Djinn")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.magicdjinn_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("63");
+                    statpower.setText("220");
+                    statspeed.setText("155");
+                    statstamina.setText("120");
+
+                }
+
+
+                if (test.equals("Scorchpeg")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.lightscorchpeg_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("56");
+                    statpower.setText("200");
+                    statspeed.setText("200");
+                    statstamina.setText("130");
+                }
+                if (test.equals("Vadamagma")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.legendvadamagma_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("56");
+                    statpower.setText("215");
+                    statspeed.setText("199");
+                    statstamina.setText("140");
+
+                }
+                if (test.equals("Gravoid")) {
+
+                    profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.metalgravoid_0);
+                    profil.setImageDrawable(profil2[0]);
+
+                    statlife.setText("53");
+                    statpower.setText("220");
+                    statspeed.setText("185");
+                    statstamina.setText("120");
+                }
+
             }
         });
-*/
-    }
-}
+
+
+                }
+
+
+            }
+
+
