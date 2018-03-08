@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_bte_dark"
+            android:icon="@drawable/bte_dark"
+            android:title="Dark" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:icon="@drawable/bte_earth"
+            android:title="Earth" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:icon="@drawable/bte_light"
+            android:title="Light" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
+            android:icon="@drawable/bte_water"
+            android:title="Water" />
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+        <item android:title="Thunder"
+            android:icon="@drawable/bte_water"/>
+
+        <item android:title="Thunder"
+            android:icon="@drawable/bte_water"/>
+
+        <item android:title="Magic"
+            android:icon="@drawable/bte_water"/>
+
+        <item android:title="Nature"
+            android:icon="@drawable/bte_water"/>
+
+        <item android:title="Legend"
+            android:icon="@drawable/bte_water"/>
+    </group>
 
 </menu>

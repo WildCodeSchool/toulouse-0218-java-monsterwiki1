@@ -2,12 +2,14 @@ package fr.wcs.monsterwiki;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,9 +24,9 @@ public class MonsterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_monster);
 
         ImageView profil = findViewById(R.id.img_monster);
-        ImageView element1 = findViewById(R.id.img_element1);
+        final ImageView element1 = findViewById(R.id.img_element1);
         ImageView element2 = findViewById(R.id.img_element2);
-        ImageView element3=findViewById(R.id.img_element3);
+        final ImageView element3=findViewById(R.id.img_element3);
         TextView statpower = findViewById(R.id.stats_power);
         TextView statlife = findViewById(R.id.stats_life);
         TextView statstamina = findViewById(R.id.stats_stamina);
@@ -33,7 +35,7 @@ public class MonsterActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        String test = intent.getStringExtra("extraname");
+        final String test = intent.getStringExtra("extraname");
         if (test.equals("Tyrannoking")) {
             Toast.makeText(this, "Monstre 0", Toast.LENGTH_SHORT).show();
             Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_dark);
@@ -56,7 +58,7 @@ public class MonsterActivity extends AppCompatActivity {
             element2.setVisibility(View.INVISIBLE);
 
 
-            String power="242";
+            String power = "242";
             statpower.setText(power);
             String life="81";
             statlife.setText(life);
@@ -66,7 +68,10 @@ public class MonsterActivity extends AppCompatActivity {
             statstamina.setText(stamina);
 
 
+
+
         }
+
 
         if (test.equals("Panda")) {
 
@@ -95,7 +100,7 @@ public class MonsterActivity extends AppCompatActivity {
             Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.earthrockilla_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Thunder Eagle";
-            name.setText("Thunder Eagle");
+            name.setText(truename);
             Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_earth);
             element3.setImageDrawable(drawableElement3);
             element3.setVisibility(View.VISIBLE);
@@ -118,7 +123,7 @@ public class MonsterActivity extends AppCompatActivity {
             Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.thunderthunder_eagle_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Thunder Eagle";
-            name.setText("Thunder Eagle");
+            name.setText(truename);
             Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_thunder);
             element3.setImageDrawable(drawableElement3);
             element3.setVisibility(View.VISIBLE);
@@ -141,7 +146,7 @@ public class MonsterActivity extends AppCompatActivity {
             Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.watersealion_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Sealion";
-            name.setText("Sealion");
+            name.setText(truename);
             Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_water);
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
@@ -188,7 +193,7 @@ public class MonsterActivity extends AppCompatActivity {
             Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.lightlight_spirit_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Scorchpeg";
-            name.setText("Scorchpeg");
+            name.setText(truename);
             Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_light);
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
@@ -212,7 +217,7 @@ public class MonsterActivity extends AppCompatActivity {
             Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.legendarch_knight_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Vadamagma";
-            name.setText("Vadamagma");
+            name.setText(truename);
             Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_legend);
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
@@ -225,18 +230,14 @@ public class MonsterActivity extends AppCompatActivity {
             statspeed.setText(speed);
             String stamina="140";
             statstamina.setText(stamina);
-            /*power=331;
-            LIFE=135;
-            Vitesse=306;
-            Stamina=140;
-             */
+
         }
         if (test.equals("Gravoid")) {
 
             Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.metalgravoid_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Gravoid";
-            name.setText("Gravoid");
+            name.setText(truename);
             Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_metal);
             element1.setImageDrawable(drawableElement1);
             Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_earth);
@@ -249,15 +250,19 @@ public class MonsterActivity extends AppCompatActivity {
             statspeed.setText(speed);
             String stamina="120";
             statstamina.setText(stamina);
-            /*power=290;
-            LIFE=104;
-            Vitesse=244;
-            Stamina=120;
-            Exemple
-            String speed2="654";
-            statspeed.setText(speed2);
-             */
-        }
 
+
+        }
+        /*FloatingActionButton left=findViewById(R.id.floating_left);
+        left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (test.equals("Fire Lion")) {
+                    Drawable drawableElement1 = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.bte_dark);
+                    element3.setImageDrawable(drawableElement1);
+                }
+            }
+        });
+*/
     }
 }

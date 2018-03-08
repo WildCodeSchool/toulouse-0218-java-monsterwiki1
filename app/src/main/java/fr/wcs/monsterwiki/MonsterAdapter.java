@@ -47,10 +47,15 @@ public class MonsterAdapter extends ArrayAdapter<MonsterModel> {
         imgElement1.setImageDrawable(drawableElement1);
 
         /*si l'element2est appellé alors*/
-        if (monster.getElement2()!=0){
         ImageView imgElement2=convertView.findViewById(R.id.iv_element2);
+        if (monster.getElement2()!=0){
+
         Drawable drawableElement2=ContextCompat.getDrawable(getContext(),monster.getElement2());
         imgElement2.setImageDrawable(drawableElement2);}
+        else{
+            imgElement2.setImageDrawable(null);
+
+        }
 
 
         // Return the completed view to render on screen

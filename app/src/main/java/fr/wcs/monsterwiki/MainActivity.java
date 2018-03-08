@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.action_setting);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +63,15 @@ public class MainActivity extends AppCompatActivity
         results.add(new MonsterModel("Vadamagma",R.drawable.legendvadamagma_1, R.drawable.bte_legend, R.drawable.bte_fire));
         results.add(new MonsterModel("Gravoid", R.drawable.metalgravoid_1,R.drawable.bte_metal, R.drawable.bte_earth));
 
+        // récupérer la valeur de l'extra Type
+
+        // créer un nouvel ArrayList vide
+
+        // faire une boucle qui parcours tous les éléments de results
+
+        // si l'élément à le même type que celui de l'intent, l'ajouter à la nouvelle ArrayList
+
+        // charger l'adapter avec la nouvelle ArrayList plutôt que results
 
 
       /*  results.add(new MonsterModel("ugrehhd",14,65,2));
@@ -89,6 +98,8 @@ public class MainActivity extends AppCompatActivity
                     case 1:
                         name= "Fire Lion";
                         intent.putExtra("extraname",name);
+
+
                         break;
                     case 2:
                         name= "Panda";
@@ -163,7 +174,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_setting) {
             return true;
         }
 
@@ -176,7 +187,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_bte_dark) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -184,9 +195,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 
