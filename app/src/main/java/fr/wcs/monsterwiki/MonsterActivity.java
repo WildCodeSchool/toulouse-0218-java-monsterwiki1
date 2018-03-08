@@ -24,6 +24,7 @@ public class MonsterActivity extends AppCompatActivity {
         ImageView profil = findViewById(R.id.img_monster);
         ImageView element1 = findViewById(R.id.img_element1);
         ImageView element2 = findViewById(R.id.img_element2);
+       ImageView element3=findViewById(R.id.img_element3);
         TextView statpower = findViewById(R.id.stats_power);
         String power = statpower.getText().toString();
         TextView statlife = findViewById(R.id.stats_life);
@@ -37,7 +38,11 @@ public class MonsterActivity extends AppCompatActivity {
         String test = intent.getStringExtra("extraplace");
         if (test.equals("0")) {
             Toast.makeText(this, "Monstre 0", Toast.LENGTH_SHORT).show();
-
+            Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_dark);
+            element3.setImageDrawable(drawableElement3);
+            element3.setVisibility(View.VISIBLE);
+            element1.setVisibility(View.INVISIBLE);
+            element2.setVisibility(View.INVISIBLE);
 
         }
         if (test.equals("1")) {
@@ -46,7 +51,7 @@ public class MonsterActivity extends AppCompatActivity {
             profil.setImageDrawable(drawableProfil1);
             Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
             element1.setImageDrawable(drawableElement1);
-
+            /*element2.setVisibility(View.INVISIBLE);
             /*
             puissance=242;
             life=81,
