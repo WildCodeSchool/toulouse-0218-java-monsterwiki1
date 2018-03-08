@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity
         ArrayList<MonsterModel> results = new ArrayList<>();
 
 
-        results.add(new MonsterModel("Tyrannoking",R.drawable.darktyrannoking_1, R.drawable.bte_dark,R.drawable.index));
-        results.add(new MonsterModel("Fire Lion",R.drawable.fire_lion_1fire, R.drawable.bte_fire, R.drawable.index));
-        results.add(new MonsterModel("Panda",R.drawable.naturepanda_1, R.drawable.bte_nature, R.drawable.index));
-        results.add(new MonsterModel("Rockila",R.drawable.earthrockilla_1, R.drawable.bte_earth, R.drawable.index));
-        results.add(new MonsterModel("Thunder Eagle", R.drawable.thunderthunder_eagle_1,R.drawable.bte_thunder, R.drawable.index));
+        results.add(new MonsterModel("Tyrannoking",R.drawable.darktyrannoking_1, R.drawable.bte_dark));
+        results.add(new MonsterModel("Fire Lion",R.drawable.fire_lion_1fire, R.drawable.bte_fire));
+        results.add(new MonsterModel("Panda",R.drawable.naturepanda_1, R.drawable.bte_nature));
+        results.add(new MonsterModel("Rockila",R.drawable.earthrockilla_1, R.drawable.bte_earth));
+        results.add(new MonsterModel("Thunder Eagle", R.drawable.thunderthunder_eagle_1,R.drawable.bte_thunder));
         results.add(new MonsterModel("Sealion",R.drawable.watersealion_1, R.drawable.bte_water,R.drawable.bte_fire));
         results.add(new MonsterModel("Djinn",R.drawable.magicdjinn_1, R.drawable.bte_magic, R.drawable.bte_fire));
         results.add(new MonsterModel("Scorchpeg",R.drawable.lightscorchpeg_1, R.drawable.bte_light, R.drawable.bte_fire));
@@ -83,44 +83,44 @@ public class MainActivity extends AppCompatActivity
                 switch (i){
 
                     case 0:
-                        String place= "0";
-                        intent.putExtra("extraplace",place);
+                        String name= "Tyrannoking";
+                        intent.putExtra("extraname",name);
                         break;
                     case 1:
-                        place="1";
-                        intent.putExtra("extraplace",place);
+                        name= "Fire Lion";
+                        intent.putExtra("extraname",name);
                         break;
                     case 2:
-                        place="2";
-                        intent.putExtra("extraplace",place);
+                        name= "Panda";
+                        intent.putExtra("extraname",name);
                         break;
                     case 3:
-                        place="3";
-                        intent.putExtra("extraplace",place);
+                        name= "Rockila";
+                        intent.putExtra("extraname",name);
                         break;
                     case 4:
-                        place="4";
-                        intent.putExtra("extraplace",place);
+                        name= "Thunder Eagle";
+                        intent.putExtra("extraname",name);
                         break;
                     case 5:
-                        place="5";
-                        intent.putExtra("extraplace",place);
+                        name= "Sealion";
+                        intent.putExtra("extraname",name);
                         break;
                     case 6:
-                        place="6";
-                        intent.putExtra("extraplace",place);
+                        name= "Djinn";
+                        intent.putExtra("extraname",name);
                         break;
                     case 7:
-                        place="7";
-                        intent.putExtra("extraplace",place);
+                        name= "Scorchpeg";
+                        intent.putExtra("extraname",name);
                         break;
                     case 8:
-                        place="8";
-                        intent.putExtra("extraplace",place);
+                        name= "Vadamagma";
+                        intent.putExtra("extraname",name);
                         break;
                     case 9:
-                        place="9";
-                        intent.putExtra("extraplace",place);
+                        name= "Gravoid";
+                        intent.putExtra("extraname",name);
                         break;
 
                 }

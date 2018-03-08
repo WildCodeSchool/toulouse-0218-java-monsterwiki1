@@ -49,4 +49,10 @@ public class MonsterModel {
         this.element1 = element1;
         this.element2 = element2;
     }
+    /*On creer un deuxieme constructeur pour pouvoir utiliser le nombre d'element que l'on veut */
+    public MonsterModel(String name, int profil, int element1) {
+        this.name = name;
+        this.profil = profil;
+        this.element1 = element1;
+    }
 }
