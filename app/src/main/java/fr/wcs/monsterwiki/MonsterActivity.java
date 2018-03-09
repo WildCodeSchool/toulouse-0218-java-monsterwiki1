@@ -38,7 +38,6 @@ public class MonsterActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final String test = intent.getStringExtra("extraname");
         if (test.equals("Tyrannoking")) {
-            Toast.makeText(this, "Monstre 0", Toast.LENGTH_SHORT).show();
             Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_dark);
             element3.setImageDrawable(drawableElement3);
             element3.setVisibility(View.VISIBLE);
@@ -188,7 +187,7 @@ public class MonsterActivity extends AppCompatActivity {
         }
         if (test.equals("Scorchpeg")) {
 
-            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.lightlight_spirit_1);
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.lightscorchpeg_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Scorchpeg";
             name.setText(truename);
@@ -212,7 +211,7 @@ public class MonsterActivity extends AppCompatActivity {
         }
         if (test.equals("Vadamagma")) {
 
-            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.legendarch_knight_1);
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.legendvadamagma_1);
             profil.setImageDrawable(drawableProfil1);
             String truename = "Vadamagma";
             name.setText(truename);
@@ -251,9 +250,12 @@ public class MonsterActivity extends AppCompatActivity {
 
 
         }
-        final Drawable[] profil2 = {ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_0)};
-        final FloatingActionButton left = findViewById(R.id.floating_left);
-        left.setOnClickListener(new View.OnClickListener() {
+
+
+
+            final Drawable[] profil2 = {ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_0)};
+            final FloatingActionButton left = findViewById(R.id.floating_left);
+            left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 level.setText("Level 0");
@@ -351,6 +353,9 @@ public class MonsterActivity extends AppCompatActivity {
                     statspeed.setText("200");
                     statstamina.setText("130");
                 }
+
+
+
                 if (test.equals("Vadamagma")) {
 
                     profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.legendvadamagma_0);
@@ -362,6 +367,8 @@ public class MonsterActivity extends AppCompatActivity {
                     statstamina.setText("140");
 
                 }
+
+
                 if (test.equals("Gravoid")) {
 
                     profil2[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.metalgravoid_0);
@@ -373,6 +380,98 @@ public class MonsterActivity extends AppCompatActivity {
                     statstamina.setText("120");
                 }
 
+
+
+            }
+        });
+
+        final Drawable[] profil3 = {ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_2)};
+        final FloatingActionButton right = findViewById(R.id.floating_right);
+        right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level.setText("Level 3");
+                right.setVisibility(View.INVISIBLE);
+                if (test.equals("Tyrannoking")){
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_2);
+                    statlife.setText("50");
+                    statpower.setText("230");
+                    statspeed.setText("175");
+                    statstamina.setText("100");
+                }
+                if (test.equals("Fire Lion")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.firefire_lion_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("93");
+                    statpower.setText("286");
+                    statspeed.setText("227");
+                    statstamina.setText("100");
+                }
+                if (test.equals("Panda")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.naturepanda_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("104");
+                    statpower.setText("247");
+                    statspeed.setText("260");
+                    statstamina.setText("100");
+                }
+                if (test.equals("Rockila")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.earthrockilla_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("132");
+                    statpower.setText("227");
+                    statspeed.setText("227");
+                    statstamina.setText("100");
+                }
+                if (test.equals("Thunder Eagle")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.thunderthunder_eagle_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("93");
+                    statpower.setText("227");
+                    statspeed.setText("325");
+                    statstamina.setText("100");
+                }
+                if (test.equals("Sealion")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.watersealion_0);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("102");
+                    statpower.setText("322");
+                    statspeed.setText("286");
+                    statstamina.setText("110");
+                }
+                if (test.equals("Djinn")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.magicdjinn_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("142");
+                    statpower.setText("351");
+                    statspeed.setText("244");
+                    statstamina.setText("120");
+                }
+                if (test.equals("Scorchpeg")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.lightscorchpeg_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("136");
+                    statpower.setText("338");
+                    statspeed.setText("338");
+                    statstamina.setText("130");
+                }
+                if (test.equals("Vadamagma")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.legendvadamagma_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("155");
+                    statpower.setText("391");
+                    statspeed.setText("362");
+                    statstamina.setText("140");
+                }
+                if (test.equals("Gravoid")) {
+                    profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.metalgravoid_2);
+                    profil.setImageDrawable(profil3[0]);
+                    statlife.setText("119");
+                    statpower.setText("343");
+                    statspeed.setText("299");
+                    statstamina.setText("120");
+                }
+
             }
         });
 
@@ -381,5 +480,6 @@ public class MonsterActivity extends AppCompatActivity {
 
 
             }
+
 
 
