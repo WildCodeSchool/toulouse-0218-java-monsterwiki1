@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +24,10 @@ public class MonsterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster);
+
+        ImageView zoom = findViewById(R.id.img_monster);
+        Animation zoomAnimation = AnimationUtils.loadAnimation(MonsterActivity.this, R.anim.zoom);
+        zoom.startAnimation(zoomAnimation);
 
         final ImageView profil = findViewById(R.id.img_monster);
         final ImageView element1 = findViewById(R.id.img_element1);
@@ -394,6 +400,7 @@ public class MonsterActivity extends AppCompatActivity {
                 right.setVisibility(View.INVISIBLE);
                 if (test.equals("Tyrannoking")){
                     profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_2);
+                    profil.setImageDrawable(profil3[0]);
                     statlife.setText("50");
                     statpower.setText("230");
                     statspeed.setText("175");
