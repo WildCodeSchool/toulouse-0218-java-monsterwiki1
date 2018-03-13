@@ -8,7 +8,8 @@
         <item
             android:id="@+id/nav_bte_dark"
             android:icon="@drawable/bte_dark"
-            android:title="Dark" />
+            android:title="Dark"
+            />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/bte_earth"
@@ -19,7 +20,7 @@
             android:title="Light" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/bte_water"
+            android:icon="@drawable/eau"
             android:title="Water" />
 
         <item android:title="Thunder"

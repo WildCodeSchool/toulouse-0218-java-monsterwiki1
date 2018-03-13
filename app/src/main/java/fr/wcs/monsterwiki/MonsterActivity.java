@@ -29,39 +29,46 @@ public class MonsterActivity extends AppCompatActivity {
         Animation zoomAnimation = AnimationUtils.loadAnimation(MonsterActivity.this, R.anim.zoom);
         zoom.startAnimation(zoomAnimation);
         Intent intent = getIntent();
+        final FloatingActionButton left = findViewById(R.id.floating_left);
+        final FloatingActionButton right = findViewById(R.id.floating_right);
         final String test = intent.getStringExtra("extraname");
 
 
         level1(test);
 
 
-        FloatingActionButton left = findViewById(R.id.floating_left);
+
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(i==1) {
                     level0(test);
                     i--;
+                    left.setVisibility(View.INVISIBLE);
+
                 }
                 else if(i==2){
                     level1(test);
                     i--;
+                    right.setVisibility(View.VISIBLE);
                 }
 
             }
         });
 
-        FloatingActionButton right = findViewById(R.id.floating_right);
+
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(i==1) {
                     level2(test);
                     i++;
+                    right.setVisibility(View.INVISIBLE);
                 }
                 else if(i==0){
                     level1(test);
                     i++;
+                    left.setVisibility(View.VISIBLE);
                 }
 
             }
