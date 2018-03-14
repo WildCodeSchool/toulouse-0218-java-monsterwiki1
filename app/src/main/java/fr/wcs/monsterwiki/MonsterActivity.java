@@ -28,10 +28,13 @@ public class MonsterActivity extends AppCompatActivity {
         ImageView zoom = findViewById(R.id.img_monster);
         Animation zoomAnimation = AnimationUtils.loadAnimation(MonsterActivity.this, R.anim.zoom);
         zoom.startAnimation(zoomAnimation);
+
         Intent intent = getIntent();
+        final String test = intent.getStringExtra("extraname");
+
         final FloatingActionButton left = findViewById(R.id.floating_left);
         final FloatingActionButton right = findViewById(R.id.floating_right);
-        final String test = intent.getStringExtra("extraname");
+
 
 
         level1(test);
@@ -318,6 +321,7 @@ public class MonsterActivity extends AppCompatActivity {
         final TextView statstamina = findViewById(R.id.stats_stamina);
         final TextView statspeed = findViewById(R.id.stats_speed);
         final TextView name = findViewById(R.id.text_monster);
+        level.setText("Level 1");
 
 
 
