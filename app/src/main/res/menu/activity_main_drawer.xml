@@ -6,37 +6,52 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_bte_dark"
-            android:icon="@drawable/bte_dark"
-            android:title="Dark"
-            />
+            android:id="@+id/nav_dark"
+            android:icon="@drawable/darkmenu"
+            android:title="Dark" />
+
+
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/bte_earth"
+            android:id="@+id/nav_fire"
+            android:icon="@drawable/firemenu"
+            android:title="Fire" />
+
+
+        <item
+            android:id="@+id/nav_earth"
+            android:icon="@drawable/earthmenu"
             android:title="Earth" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/bte_light"
+            android:id="@+id/nav_light"
+            android:icon="@drawable/lightmenu"
             android:title="Light" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_water"
             android:icon="@drawable/eau"
             android:title="Water" />
 
-        <item android:title="Thunder"
-            android:icon="@drawable/bte_water"/>
+        <item
+            android:id="@+id/nav_thunder"
+            android:icon="@drawable/thundermenu"
+            android:title="Thunder"
+            />
 
-        <item android:title="Thunder"
-            android:icon="@drawable/bte_water"/>
+        <item
+            android:id="@+id/nav_magic"
+            android:title="Magic"
+            android:icon="@drawable/magicmenu"/>
 
-        <item android:title="Magic"
-            android:icon="@drawable/bte_water"/>
 
-        <item android:title="Nature"
-            android:icon="@drawable/bte_water"/>
+        <item
+            android:id="@+id/nav_nature"
+            android:title="Nature"
+            android:icon="@drawable/naturemenu"/>
 
-        <item android:title="Legend"
-            android:icon="@drawable/bte_water"/>
+
+        <item
+            android:id="@+id/nav_legend"
+            android:title="Legend"
+            android:icon="@drawable/legendmenu"/>
     </group>
 
 </menu>
