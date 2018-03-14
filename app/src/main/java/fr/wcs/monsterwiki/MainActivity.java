@@ -54,33 +54,120 @@ public class MainActivity extends AppCompatActivity
         ArrayList<MonsterModel> monsterList = new ArrayList<>();
 
 
-        monsterList.add(new MonsterModel("Tyrannoking",R.drawable.darktyrannoking_1, R.drawable.bte_dark));
-        monsterList.add(new MonsterModel("Fire Lion",R.drawable.fire_lion_1fire, R.drawable.bte_fire));
-        monsterList.add(new MonsterModel("Panda",R.drawable.naturepanda_1, R.drawable.bte_nature));
-        monsterList.add(new MonsterModel("Rockila",R.drawable.earthrockilla_1, R.drawable.bte_earth));
-        monsterList.add(new MonsterModel("Thunder Eagle", R.drawable.thunderthunder_eagle_1,R.drawable.bte_thunder));
-        monsterList.add(new MonsterModel("Sealion",R.drawable.watersealion_1, R.drawable.bte_water,R.drawable.bte_fire));
-        monsterList.add(new MonsterModel("Djinn",R.drawable.magicdjinn_1, R.drawable.bte_magic, R.drawable.bte_fire));
-        monsterList.add(new MonsterModel("Scorchpeg",R.drawable.lightscorchpeg_1, R.drawable.bte_light, R.drawable.bte_fire));
-        monsterList.add(new MonsterModel("Vadamagma",R.drawable.legendvadamagma_1, R.drawable.bte_legend, R.drawable.bte_fire));
-        monsterList.add(new MonsterModel("Gravoid", R.drawable.metalgravoid_1,R.drawable.bte_metal, R.drawable.bte_earth));
+        monsterList.add(new MonsterModel("Tyrannoking", R.drawable.darktyrannoking_1, R.drawable.bte_dark));
+        monsterList.add(new MonsterModel("Fire Lion", R.drawable.fire_lion_1fire, R.drawable.bte_fire));
+        monsterList.add(new MonsterModel("Panda", R.drawable.naturepanda_1, R.drawable.bte_nature));
+        monsterList.add(new MonsterModel("Rockila", R.drawable.earthrockilla_1, R.drawable.bte_earth));
+        monsterList.add(new MonsterModel("Thunder Eagle", R.drawable.thunderthunder_eagle_1, R.drawable.bte_thunder));
+        monsterList.add(new MonsterModel("Sealion", R.drawable.watersealion_1, R.drawable.bte_water, R.drawable.bte_fire));
+        monsterList.add(new MonsterModel("Djinn", R.drawable.magicdjinn_1, R.drawable.bte_magic, R.drawable.bte_fire));
+        monsterList.add(new MonsterModel("Scorchpeg", R.drawable.lightscorchpeg_1, R.drawable.bte_light, R.drawable.bte_fire));
+        monsterList.add(new MonsterModel("Vadamagma", R.drawable.legendvadamagma_1, R.drawable.bte_legend, R.drawable.bte_fire));
+        monsterList.add(new MonsterModel("Gravoid", R.drawable.metalgravoid_1, R.drawable.bte_metal, R.drawable.bte_earth));
 
-        //creer nouvelle liste =liste finale
-        final ArrayList<MonsterModel> monsterListFiltered=new ArrayList<>();
-        //creation de la boucle
-        for (MonsterModel monsterModel:monsterList){
-            //si l'element *** correspond à***
-            if(monsterModel.getElement1()== R.drawable.bte_fire||monsterModel.getElement2()==R.drawable.bte_fire){
-                //on le rajoute a la nouvelle liste
-                monsterListFiltered.add(monsterModel);
-            }
-
-
-
-
-
-
+        ArrayList<MonsterModel> monsterListFiltered = new ArrayList<>();
+        Intent intent = getIntent();
+        String items = intent.getStringExtra("element");
+        if(items==null){
+            items="";
+            monsterListFiltered = monsterList;
         }
+
+        if (items.equals("dark")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_dark || monsterModel.getElement2() == R.drawable.bte_dark) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        //creation de la boucle
+        if (items.equals("fire")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_fire || monsterModel.getElement2() == R.drawable.bte_fire) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("earth")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_earth || monsterModel.getElement2() == R.drawable.bte_earth) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("light")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_light || monsterModel.getElement2() == R.drawable.bte_light) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("water")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_water || monsterModel.getElement2() == R.drawable.bte_water) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("thunder")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_thunder || monsterModel.getElement2() == R.drawable.bte_thunder) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("magic")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_magic || monsterModel.getElement2() == R.drawable.bte_magic) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("nature")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_nature || monsterModel.getElement2() == R.drawable.bte_nature) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+        if (items.equals("legend")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_legend || monsterModel.getElement2() == R.drawable.bte_legend) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
+
+
+
+
         // récupérer la valeur de l'extra Type
 
 
@@ -103,6 +190,7 @@ public class MainActivity extends AppCompatActivity
         listTrip.setAdapter(adapter);
 
         final ListView listv = findViewById(R.id.list_monster);
+        final ArrayList<MonsterModel> finalMonsterListFiltered = monsterListFiltered;
         listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -110,116 +198,17 @@ public class MainActivity extends AppCompatActivity
 
                 Intent intent = new Intent(MainActivity.this, MonsterActivity.class);
 
-                MonsterModel currentMonster=monsterListFiltered.get(i);
+                MonsterModel currentMonster = finalMonsterListFiltered.get(i);
                 intent.putExtra("extraname", currentMonster.getName());
 
-               /* String name;
-                if(monsterListFiltered.equals("Tyrannoking")){
-                    name= "Tyrannoking";
-                    intent.putExtra("extraname",name);
-                }
 
-                if(monsterListFiltered.equals("Fire Lion")){
-                    name= "Fire Lion";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Panda")){
-                    name= "Panda";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Rockila")){
-                    name= "Rockila";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Thunder Eagle")){
-                    name= "Thunder Eagle";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Sealion")){
-                    name= "Sealion";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Djinn")){
-                    name= "Djinn";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Scorchpeg")){
-                    name= "Scorchpeg";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Vadamagma")){
-                    name= "Vadamagma";
-                    intent.putExtra("extraname",name);
-                }
-
-                if(monsterListFiltered.equals("Gravoid")){
-                    name= "Gravoid";
-                    intent.putExtra("extraname",name);
-                }*/
-
-                /**switch (i){
-
-                    case 0:
-                        String name= "Tyrannoking";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 1:
-                        name= "Fire Lion";
-                        intent.putExtra("extraname",name);
-
-
-                        break;
-                    case 2:
-                        name= "Panda";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 3:
-                        name= "Rockila";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 4:
-                        name= "Thunder Eagle";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 5:
-                        name= "Sealion";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 6:
-                        name= "Djinn";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 7:
-                        name= "Scorchpeg";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 8:
-                        name= "Vadamagma";
-                        intent.putExtra("extraname",name);
-                        break;
-                    case 9:
-                        name= "Gravoid";
-                        intent.putExtra("extraname",name);
-                        break;
-
-                }**/
                 startActivity(intent);
             }
         });
 
-        /*TextView monster = findViewById(R.id.textView_name);
-        String name = monster.getText().toString();*/
 
+    }
 
-
-            }
 
 
 
@@ -261,29 +250,43 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Intent intent = new Intent(MainActivity.this,MainActivity.class);
+        String element;
         if (id == R.id.nav_dark) {
+           element="dark";
+           intent.putExtra("element",element);
             // Handle the camera action
         } else if (id == R.id.nav_fire) {
+            element="fire";
+            intent.putExtra("element",element);
 
         } else if (id == R.id.nav_earth) {
+            element="earth";
+            intent.putExtra("element",element);
 
         } else if (id == R.id.nav_light) {
-
+            element="light";
+            intent.putExtra("element",element);
 
         } else if (id == R.id.nav_water) {
-
+            element="water";
+            intent.putExtra("element",element);
         } else if (id == R.id.nav_thunder) {
-
+            element="thunder";
+            intent.putExtra("element",element);
         } else if (id == R.id.nav_magic) {
-
+            element="magic";
+            intent.putExtra("element",element);
 
         } else if (id == R.id.nav_nature) {
-
+            element="nature";
+            intent.putExtra("element",element);
         } else if (id == R.id.nav_legend) {
-
+            element="legend";
+            intent.putExtra("element",element);
         }
 
+        startActivity(intent);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
