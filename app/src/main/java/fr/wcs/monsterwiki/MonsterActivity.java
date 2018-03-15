@@ -35,6 +35,7 @@ public class MonsterActivity extends AppCompatActivity {
 
         final FloatingActionButton left = findViewById(R.id.floating_left);
         final FloatingActionButton right = findViewById(R.id.floating_right);
+
         setTitle(test);
 
         //Bouton retour image sorcier

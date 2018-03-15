@@ -12,15 +12,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * Created by wilder on 06/03/18.
  */
 
 public class MonsterAdapter extends ArrayAdapter<MonsterModel> {
+    ArrayList<MonsterModel> monsterList= new ArrayList<>();
 
     public MonsterAdapter(Context context, ArrayList<MonsterModel> trips) {
         super(context, 0, trips);
+        monsterList=trips;
     }
 
     @Override
@@ -61,5 +64,22 @@ public class MonsterAdapter extends ArrayAdapter<MonsterModel> {
         // Return the completed view to render on screen
         return convertView;
     }
+    public void filter(ArrayList<MonsterModel> searchList) {
+        monsterList=searchList;
 
+    }
+    @Override
+    public int getCount() {
+        return monsterList.size();
+    }
+
+    @Override
+    public MonsterModel getItem(int position) {
+        return monsterList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 }

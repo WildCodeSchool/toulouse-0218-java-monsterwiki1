@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,15 +16,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+import static android.widget.SearchView.*;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +56,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         final ListView listTrip = findViewById(R.id.list_monster);
-        ArrayList<MonsterModel> monsterList = new ArrayList<>();
+        final ArrayList<MonsterModel> monsterList = new ArrayList<>();
+
 
 
         monsterList.add(new MonsterModel("Tyrannoking", R.drawable.darktyrannoking_1, R.drawable.bte_dark));
@@ -189,8 +195,51 @@ public class MainActivity extends AppCompatActivity
         final MonsterAdapter adapter = new MonsterAdapter(this, monsterListFiltered);
         listTrip.setAdapter(adapter);
 
+
+
+
         final ListView listv = findViewById(R.id.list_monster);
         final ArrayList<MonsterModel> finalMonsterListFiltered = monsterListFiltered;
+
+
+
+
+
+
+
+       SearchView editSearch=findViewById(R.id.searchView);
+        editSearch.setOnQueryTextListener(new OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String search_enter) {
+                Log.d("Tacos", search_enter);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String search_enter) {
+
+                ArrayList<MonsterModel> listSearch=new ArrayList<>();
+               adapter.clear();
+                Log.d("Tacos", search_enter);
+                if(search_enter.length()==0){
+                    adapter.filter(monsterList);
+                }else {
+                    for (MonsterModel monsterModel : monsterList) {
+                        if (monsterModel.getName().toLowerCase(Locale.getDefault()).contains(search_enter)) {
+                            listSearch.add(monsterModel);
+                        }
+                    }
+                    adapter.filter(listSearch);
+                }
+
+            adapter.notifyDataSetChanged();
+                return false;
+            }
+        });
+
+
+
+
         listv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -252,7 +301,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         Intent intent = new Intent(MainActivity.this,MainActivity.class);
         String element;
-
         if (id == R.id.nav_dark) {
            element="dark";
            intent.putExtra("element",element);
@@ -296,6 +344,7 @@ public class MainActivity extends AppCompatActivity
         // [...]
         return true;
     }
+
 
 }
 
