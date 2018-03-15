@@ -252,6 +252,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         Intent intent = new Intent(MainActivity.this,MainActivity.class);
         String element;
+
         if (id == R.id.nav_dark) {
            element="dark";
            intent.putExtra("element",element);

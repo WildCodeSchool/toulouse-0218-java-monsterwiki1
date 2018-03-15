@@ -35,7 +35,7 @@ public class MonsterActivity extends AppCompatActivity {
 
         final FloatingActionButton left = findViewById(R.id.floating_left);
         final FloatingActionButton right = findViewById(R.id.floating_right);
-
+        setTitle(test);
 
         //Bouton retour image sorcier
         ImageView retour =findViewById(R.id.imageView_retour);
@@ -284,7 +284,7 @@ public class MonsterActivity extends AppCompatActivity {
             statstamina.setText("100");
         }
         if (test.equals("Sealion")) {
-            profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.watersealion_0);
+            profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.watersealion_2);
             profil.setImageDrawable(profil3[0]);
             statlife.setText("102");
             statpower.setText("322");
@@ -346,6 +346,8 @@ public class MonsterActivity extends AppCompatActivity {
             element3.setVisibility(View.VISIBLE);
             element1.setVisibility(View.INVISIBLE);
             element2.setVisibility(View.INVISIBLE);
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.darktyrannoking_1);
+            profil.setImageDrawable(drawableProfil1);
 
         }
         if (test.equals("Fire Lion")) {
