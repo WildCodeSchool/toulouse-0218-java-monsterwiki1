@@ -594,6 +594,10 @@ public class MonsterActivity extends AppCompatActivity {
             element1.setVisibility(View.INVISIBLE);
             element2.setVisibility(View.INVISIBLE);
 
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.tyrannoking_25);
+            profil.setImageDrawable(drawableProfil1);
+
+
         }
         if (test.equals("Fire Lion")) {
 
