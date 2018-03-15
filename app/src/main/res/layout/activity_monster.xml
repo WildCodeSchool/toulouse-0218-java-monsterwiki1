@@ -15,13 +15,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="84dp"
         android:clickable="true"
-        app:backgroundTint="#48b49e"
+        android:rotation="180"
+        app:backgroundTint="@android:color/background_light"
         app:layout_constraintEnd_toStartOf="@+id/img_monster"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="?attr/colorBackgroundFloating"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="@drawable/sticker_fleche_7" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floating_right"
@@ -31,14 +32,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="84dp"
         android:clickable="true"
-        android:rotation="180"
-        app:backgroundTint="#48b49e"
+        android:rotation="360"
+        app:backgroundTint="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toEndOf="@+id/img_monster"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="?attr/colorBackgroundFloating"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="@drawable/sticker_fleche_7" />
 
     <ImageView
         android:id="@+id/img_monster"
