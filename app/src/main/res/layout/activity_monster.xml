@@ -276,7 +276,7 @@
         app:layout_constraintTop_toBottomOf="@+id/text_element" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView_retour"
         android:layout_width="61dp"
         android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -25,6 +25,7 @@ public class MonsterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster);
 
+
         ImageView zoom = findViewById(R.id.img_monster);
         Animation zoomAnimation = AnimationUtils.loadAnimation(MonsterActivity.this, R.anim.zoom);
         zoom.startAnimation(zoomAnimation);
@@ -35,6 +36,16 @@ public class MonsterActivity extends AppCompatActivity {
         final FloatingActionButton left = findViewById(R.id.floating_left);
         final FloatingActionButton right = findViewById(R.id.floating_right);
 
+
+        //Bouton retour image sorcier
+        ImageView retour =findViewById(R.id.imageView_retour);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MonsterActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         level1(test);
@@ -76,6 +87,10 @@ public class MonsterActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
 
 
     }
