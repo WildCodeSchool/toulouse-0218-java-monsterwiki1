@@ -50,12 +50,17 @@ public class MonsterActivity extends AppCompatActivity {
                     left.setVisibility(View.INVISIBLE);
 
                 }
-                else if(i==2){
+
+                if(i==2){
                     level1(test);
                     i--;
                     right.setVisibility(View.VISIBLE);
                 }
-
+                else if (i==3){
+                    level2(test);
+                    i--;
+                    left.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -66,14 +71,18 @@ public class MonsterActivity extends AppCompatActivity {
                 if(i==1) {
                     level2(test);
                     i++;
-                    right.setVisibility(View.INVISIBLE);
+                    right.setVisibility(View.VISIBLE);
                 }
                 else if(i==0){
                     level1(test);
                     i++;
                     left.setVisibility(View.VISIBLE);
                 }
-
+                else if (i==2){
+                    level25(test);
+                    i++;
+                    right.setVisibility(View.INVISIBLE);
+                }
             }
         });
 
@@ -226,7 +235,7 @@ public class MonsterActivity extends AppCompatActivity {
         final TextView name = findViewById(R.id.text_monster);
         final Drawable[] profil3 = {ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_2)};
 
-        level.setText("Level 3");
+        level.setText("Level 4");
 
         if (test.equals("Tyrannoking")) {
             profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.darktyrannoking_2);
@@ -269,7 +278,7 @@ public class MonsterActivity extends AppCompatActivity {
             statstamina.setText("100");
         }
         if (test.equals("Sealion")) {
-            profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.watersealion_0);
+            profil3[0] = ContextCompat.getDrawable(MonsterActivity.this, R.drawable.watersealion_2);
             profil.setImageDrawable(profil3[0]);
             statlife.setText("102");
             statpower.setText("322");
@@ -535,9 +544,239 @@ public class MonsterActivity extends AppCompatActivity {
             statspeed.setText(speed);
             String stamina = "120";
             statstamina.setText(stamina);
+        }
+
+        }
+
+
+
+
+
+
+
+
+    private void level25(String test){
+        final ImageView profil = findViewById(R.id.img_monster);
+        final ImageView element1 = findViewById(R.id.img_element1);
+        final ImageView element2 = findViewById(R.id.img_element2);
+        final ImageView element3 = findViewById(R.id.img_element3);
+        final TextView level = findViewById(R.id.text_level);
+        final TextView statpower = findViewById(R.id.stats_power);
+        final TextView statlife = findViewById(R.id.stats_life);
+        final TextView statstamina = findViewById(R.id.stats_stamina);
+        final TextView statspeed = findViewById(R.id.stats_speed);
+        final TextView name = findViewById(R.id.text_monster);
+        final Drawable[] profil25 = {ContextCompat.getDrawable(MonsterActivity.this, R.drawable.tyrannoking_25)};
+
+        level.setText("Level 25");
+
+        if (test.equals("Tyrannoking")) {
+            Drawable drawableElement4 = ContextCompat.getDrawable(this, R.drawable.bte_dark);
+            element3.setImageDrawable(drawableElement4);
+            element3.setVisibility(View.VISIBLE);
+            element1.setVisibility(View.INVISIBLE);
+            element2.setVisibility(View.INVISIBLE);
+
+        }
+        if (test.equals("Fire Lion")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.fire_lion_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Fire Lion";
+            name.setText(truename);
+            Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
+            element3.setImageDrawable(drawableElement3);
+            element3.setVisibility(View.VISIBLE);
+            element1.setVisibility(View.INVISIBLE);
+            element2.setVisibility(View.INVISIBLE);
+
+
+            String power = "770";
+            statpower.setText(power);
+            String life = "1017";
+            statlife.setText(life);
+            String speed = "612";
+            statspeed.setText(speed);
+            String stamina = "100";
+            statstamina.setText(stamina);
 
 
         }
+
+
+        if (test.equals("Panda")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.panda_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Panda";
+            name.setText(truename);
+            Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_nature);
+            element3.setImageDrawable(drawableElement3);
+            element3.setVisibility(View.VISIBLE);
+            element1.setVisibility(View.INVISIBLE);
+            element2.setVisibility(View.INVISIBLE);
+
+            String power = "665";
+            statpower.setText(power);
+            String life = "1139";
+            statlife.setText(life);
+            String speed = "700";
+            statspeed.setText(speed);
+            String stamina = "100";
+            statstamina.setText(stamina);
+
+        }
+        if (test.equals("Rockila")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.rockilla_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Thunder Eagle";
+            name.setText(truename);
+            Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_earth);
+            element3.setImageDrawable(drawableElement3);
+            element3.setVisibility(View.VISIBLE);
+            element1.setVisibility(View.INVISIBLE);
+            element2.setVisibility(View.INVISIBLE);
+
+            String power = "612";
+            statpower.setText(power);
+            String life = "1444";
+            statlife.setText(life);
+            String speed = "612";
+            statspeed.setText(speed);
+            String stamina = "100";
+            statstamina.setText(stamina);
+
+
+        }
+        if (test.equals("Thunder Eagle")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.thunder_eagle_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Thunder Eagle";
+            name.setText(truename);
+            Drawable drawableElement3 = ContextCompat.getDrawable(this, R.drawable.bte_thunder);
+            element3.setImageDrawable(drawableElement3);
+            element3.setVisibility(View.VISIBLE);
+            element1.setVisibility(View.INVISIBLE);
+            element2.setVisibility(View.INVISIBLE);
+
+            String power = "612";
+            statpower.setText(power);
+            String life = "1017";
+            statlife.setText(life);
+            String speed = "875";
+            statspeed.setText(speed);
+            String stamina = "100";
+            statstamina.setText(stamina);
+
+
+        }
+        if (test.equals("Sealion")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.sealion_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Sealion";
+            name.setText(truename);
+            Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_water);
+            element1.setImageDrawable(drawableElement1);
+            Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
+            element2.setImageDrawable(drawableElement2);
+
+            String power = "868";
+            statpower.setText(power);
+            String life = "1119";
+            statlife.setText(life);
+            String speed = "770";
+            statspeed.setText(speed);
+            String stamina = "110";
+            statstamina.setText(stamina);
+
+
+        }
+        if (test.equals("Djinn")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.djinn_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Djinn";
+            name.setText(truename);
+            Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_magic);
+            element1.setImageDrawable(drawableElement1);
+            Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
+            element2.setImageDrawable(drawableElement2);
+            String power = "945";
+            statpower.setText(power);
+            String life = "1546";
+            statlife.setText(life);
+            String speed = "630";
+            statspeed.setText(speed);
+            String stamina = "120";
+            statstamina.setText(stamina);
+
+        }
+        if (test.equals("Scorchpeg")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.scorchpeg_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Scorchpeg";
+            name.setText(truename);
+            Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_light);
+            element1.setImageDrawable(drawableElement1);
+            Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
+            element2.setImageDrawable(drawableElement2);
+            String power = "910";
+            statpower.setText(power);
+            String life = "1485";
+            statlife.setText(life);
+            String speed = "910";
+            statspeed.setText(speed);
+            String stamina = "130";
+            statstamina.setText(stamina);
+
+        }
+        if (test.equals("Vadamagma")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.vadamagma_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Vadamagma";
+            name.setText(truename);
+            Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_legend);
+            element1.setImageDrawable(drawableElement1);
+            Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_fire);
+            element2.setImageDrawable(drawableElement2);
+            String power = "1053";
+            statpower.setText(power);
+            String life = "1689";
+            statlife.setText(life);
+            String speed = "976";
+            statspeed.setText(speed);
+            String stamina = "140";
+            statstamina.setText(stamina);
+
+        }
+        if (test.equals("Gravoid")) {
+
+            Drawable drawableProfil1 = ContextCompat.getDrawable(this, R.drawable.gravoid_25);
+            profil.setImageDrawable(drawableProfil1);
+            String truename = "Gravoid";
+            name.setText(truename);
+            Drawable drawableElement1 = ContextCompat.getDrawable(this, R.drawable.bte_metal);
+            element1.setImageDrawable(drawableElement1);
+            Drawable drawableElement2 = ContextCompat.getDrawable(this, R.drawable.bte_earth);
+            element2.setImageDrawable(drawableElement2);
+            String power = "924";
+            statpower.setText(power);
+            String life = "1302";
+            statlife.setText(life);
+            String speed = "777";
+            statspeed.setText(speed);
+            String stamina = "120";
+            statstamina.setText(stamina);
+        }
+
+
+
+
     }
 
 }
