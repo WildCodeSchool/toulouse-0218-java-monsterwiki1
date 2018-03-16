@@ -56,6 +56,12 @@
             android:id="@+id/nav_legend"
             android:title="Legend"
             android:icon="@drawable/legendmenu"/>
+        <item
+            android:id="@+id/nav_metal"
+            android:title="Metal"
+            android:icon="@drawable/menumetal"
+            />
+
     </group>
 
 </menu>

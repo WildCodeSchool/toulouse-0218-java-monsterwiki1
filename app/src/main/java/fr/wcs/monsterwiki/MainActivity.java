@@ -164,6 +164,16 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         }
+        if (items.equals("metal")) {
+            //creer nouvelle liste =liste finale
+            for (MonsterModel monsterModel : monsterList) {
+                //si l'element *** correspond à***
+                if (monsterModel.getElement1() == R.drawable.bte_metal || monsterModel.getElement2() == R.drawable.bte_metal) {
+                    //on le rajoute a la nouvelle liste
+                    monsterListFiltered.add(monsterModel);
+                }
+            }
+        }
 
 
 
@@ -284,6 +294,9 @@ public class MainActivity extends AppCompatActivity
             intent.putExtra("element",element);
         } else if (id == R.id.nav_legend) {
             element="legend";
+            intent.putExtra("element",element);
+        }else if (id == R.id.nav_metal) {
+            element="metal";
             intent.putExtra("element",element);
         }
 
