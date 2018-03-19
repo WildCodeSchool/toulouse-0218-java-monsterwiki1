@@ -5,6 +5,18 @@ package fr.wcs.monsterwiki;
  */
 
 public class MonsterModel {
+    private String name;
+    private int profil;
+    private int element1;
+    private int element2;
+
+    public MonsterModel(String name, int profil, int element1, int element2) {
+        this.name = name;
+        this.profil = profil;
+        this.element1 = element1;
+        this.element2 = element2;
+    }
+
     public String getName() {
         return name;
     }
@@ -35,24 +47,5 @@ public class MonsterModel {
 
     public void setElement2(int element2) {
         this.element2 = element2;
-    }
-
-    private String name;
-    private int profil;
-    private int element1;
-    private int element2;
-
-
-    public MonsterModel(String name, int profil, int element1, int element2) {
-        this.name = name;
-        this.profil = profil;
-        this.element1 = element1;
-        this.element2 = element2;
-    }
-    /*On creer un deuxieme constructeur pour pouvoir utiliser le nombre d'element que l'on veut */
-    public MonsterModel(String name, int profil, int element1) {
-        this.name = name;
-        this.profil = profil;
-        this.element1 = element1;
     }
 }

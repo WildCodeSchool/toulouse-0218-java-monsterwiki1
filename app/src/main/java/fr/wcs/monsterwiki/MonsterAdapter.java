@@ -3,7 +3,6 @@ package fr.wcs.monsterwiki;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,28 +34,21 @@ public class MonsterAdapter extends ArrayAdapter<MonsterModel> {
         TextView tvName = (TextView) convertView.findViewById(R.id.textView_name);
         tvName.setText(monster.getName());
 
-        String profil = String.valueOf(monster.getProfil());
-
-
-        ImageView imgProfil= convertView.findViewById(R.id.iv_profile);
-        Drawable drawableProfil= ContextCompat.getDrawable(getContext(), monster.getProfil());
+        ImageView imgProfil = convertView.findViewById(R.id.iv_profile);
+        Drawable drawableProfil = ContextCompat.getDrawable(getContext(), monster.getProfil());
         imgProfil.setImageDrawable(drawableProfil);
 
-        ImageView imgElement1=convertView.findViewById(R.id.iv_element1);
-        Drawable drawableElement1=ContextCompat.getDrawable(getContext(),monster.getElement1());
+        ImageView imgElement1 = convertView.findViewById(R.id.iv_element1);
+        Drawable drawableElement1 = ContextCompat.getDrawable(getContext(), monster.getElement1());
         imgElement1.setImageDrawable(drawableElement1);
 
         /*si l'element2est appellé alors*/
-        ImageView imgElement2=convertView.findViewById(R.id.iv_element2);
-        if (monster.getElement2()!=0){
-
-        Drawable drawableElement2=ContextCompat.getDrawable(getContext(),monster.getElement2());
-        imgElement2.setImageDrawable(drawableElement2);}
-        else{
-            imgElement2.setImageDrawable(null);
-
+        ImageView imgElement2 = convertView.findViewById(R.id.iv_element2);
+        Drawable drawableElement2 = null;
+        if (monster.getElement2() != 0) {
+            drawableElement2 = ContextCompat.getDrawable(getContext(), monster.getElement2());
         }
-
+        imgElement2.setImageDrawable(drawableElement2);
 
         // Return the completed view to render on screen
         return convertView;
